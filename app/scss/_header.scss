@@ -1,0 +1,42 @@
+.header {
+  background: radial-gradient($white, $pinkWhite);
+  .row {
+    margin-top: 10px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav {
+  flex: 1;
+  text-align: right;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+
+    @include breakpoint-up(medium) {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background: #333;
+      width: 100%;
+      overflow: hidden;
+      transition: max-height 0.5s;
+    }
+    li {
+      display: inline-block;
+      margin-right: 30px;
+
+      @include breakpoint-up(medium) {
+        display: block;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

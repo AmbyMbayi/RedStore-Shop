@@ -1,0 +1,43 @@
+.testimonials {
+  padding-top: 20px;
+
+  &__col-3 {
+    flex-basis: 10%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    @include breakpoint-up(medium) {
+      flex-basis: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+    img {
+      width: 150px;
+      margin-top: 20px;
+      border-radius: 50%;
+    }
+  }
+  h3 {
+    font-weight: 400;
+    color: $darkGray;
+  }
+  p {
+    font-size: $font-sm;
+    margin: 14px 0;
+    color: $gray;
+  }
+}
+
+.fa.fa-quote-left {
+  font-size: 14px;
+  color: $orange;
+}

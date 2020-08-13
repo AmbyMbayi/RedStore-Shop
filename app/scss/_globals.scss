@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $darkGray;
+  @include breakpoint-up(medium) {
+    color: $white;
+  }
+}
+p {
+  color: $darkGray;
+}
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+
+  @include breakpoint-up(medium) {
+    display: block;
+    cursor: pointer;
+  }
+}
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: $darkGray;
+
+  &::after {
+    content: " ";
+    background: $orange;
+    width: 80px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include breakpoint-up(medium) {
+    text-align: center;
+  }
+}
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: $orange;
+  color: $white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+
+  &:hover {
+    background: $maroon;
+  }
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+
+  @include breakpoint-up(medium) {
+    flex-basis: 100%;
+  }
+}
+
+.col-3 {
+  flex-basis: 10%;
+  min-width: 250px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  @include breakpoint-up(medium) {
+    flex-basis: 100%;
+  }
+}
+
+.col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+
+  @include breakpoint-up(medium) {
+    flex-basis: 100%;
+  }
+}

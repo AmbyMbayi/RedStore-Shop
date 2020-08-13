@@ -1,0 +1,20 @@
+.hero {
+  &__col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+
+    @include breakpoint-up(medium) {
+      flex-basis: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      padding: 50px 0;
+    }
+    h1 {
+      font-size: 50px;
+      line-height: 60px;
+      margin: 25px 0px;
+    }
+  }
+}
