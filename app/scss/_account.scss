@@ -1,0 +1,74 @@
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient($white, $pinkWhite);
+}
+
+.form-container {
+  background: $white;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  span {
+    font-weight: normal;
+    padding: 0 10px;
+    color: $gray;
+    width: 100px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  form {
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 0.5s;
+
+    a {
+      font-size: 12px;
+    }
+
+    .btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    input {
+      width: 100%;
+      height: 30px;
+      margin: 10px 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+.form-btn {
+  display: inline-block;
+}
+
+#loginForm {
+  left: -300px;
+}
+#regForm {
+  left: 0;
+}
+#indicator {
+  width: 100px;
+  border: none;
+  background: $orange;
+  height: 2px;
+  margin-top: 10px;
+  transform: translateX(100px);
+  transition: transform 0.5s;
+}
